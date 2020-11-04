@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun afterTextChanged(s: Editable?) {
-            if (et1.text.isNotEmpty() && et2.text.isNotEmpty()) {
-                b1.isEnabled = true
-            }
+            b1.isEnabled = et1.text.isNotEmpty() && et2.text.isNotEmpty()
         }
     }
 
