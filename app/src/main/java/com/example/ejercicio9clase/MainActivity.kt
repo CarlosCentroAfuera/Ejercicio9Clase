@@ -11,10 +11,11 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val b1: Button = findViewById(R.id.b1)
-    val et1: EditText = findViewById(R.id.et1)
-    val et2: EditText = findViewById(R.id.et2)
-    private val tv1: TextView = findViewById(R.id.tv1)
+    private lateinit var b1 : Button
+    private lateinit var et1 : EditText
+    private lateinit var et2 : EditText
+    private lateinit var tv1 : TextView
+
 
     private val focusListener = View.OnFocusChangeListener { vista, isFocused ->  if (isFocused) tv1.text = vista.tag.toString()}
 
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        b1 =  findViewById(R.id.b1)
+        et1 = findViewById(R.id.et1)
+        et2 = findViewById(R.id.et2)
+        tv1 = findViewById(R.id.tv1)
+
+
         setAllListener()
     }
 
